@@ -1,0 +1,76 @@
+.logo {
+    width: 50px; 
+    height: auto; 
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px #32CD32); 
+}
+
+a {
+    text-decoration: none; 
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.text-green {
+    color: #32CD32;
+}
+
+header, footer {
+    background-color: #000;
+}
+
+.navbar .nav-link {
+    color: #32CD32 !important;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #00FF00 !important;
+    text-decoration: underline;
+    transform: translateY(-3px);
+}
+
+section h2 {
+    border-bottom: 2px solid #32CD32;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-size: 2em;
+    opacity: 0;
+    transform: translateY(3px);
+    animation: fadeInUp 1s ease forwards;
+    transition: transform 0.3s, color 0.3s;
+}
+
+section p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s; 
+    transition: transform 0.3s, color 0.3s;
+}
+
+section:hover h2,
+section:hover p {
+    color: #00FF00; 
+    transform: scale(1.20); 
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
